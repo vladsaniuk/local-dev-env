@@ -1,6 +1,6 @@
 # Local dev environment  
 Start Jenkins with:   
-`docker compose up --build --detach && docker exec -u 0 -it local-dev-env-jenkins-1 bash -c "chmod 666 /var/run/docker.sock"`  
+`docker compose up --build --detach && docker exec -u 0 -it jenkins bash -c "chmod 666 /var/run/docker.sock"`  
 Go to Jenkins and SonarQube UI, update username and password.     
 Add vars in local.tfvars file in iac folder:
 * jenkins_username, jenkins_password,    

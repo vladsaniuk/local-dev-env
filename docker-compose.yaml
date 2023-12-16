@@ -2,6 +2,7 @@ version: "3.8"
 services:
 
   jenkins:
+    container_name: jenkins
     build:
       context: ./jenkins
     ports:
@@ -15,6 +16,7 @@ services:
         condition: on-failure
 
   sonarqube:
+    container_name: sonarqube
     image: sonarqube:lts-community
     stop_grace_period: 3600s
     ports:
